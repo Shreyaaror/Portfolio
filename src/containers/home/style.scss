@@ -1,0 +1,90 @@
+.home {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 1;
+  padding: 0 20px;
+}
+
+.home__text {
+  color: white;
+
+  h1 {
+    color: var(--yellow-theme-main-color);
+    margin: 0px;
+    font-weight: 500;
+    font-size: 8rem;
+    line-height: 10rem;
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+
+    /* Slide-in effect */
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideInLeft 1.2s ease-out forwards;
+  }
+.home__button {
+    margin-top: 30px;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--yellow-theme-main-color);
+    color: black;
+    cursor: pointer;
+    transition: all 0.3s ease;
+     transform: translateX(-100%);
+    opacity: 0;
+    animation: slideInLeft 1.2s ease-out forwards;
+    animation-delay: 0.3s;
+
+    &:hover {
+      background-color: white;
+      color: var(--yellow-theme-main-color);
+    }
+}
+}
+
+/* Keyframes for slide-in */
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Font Sizes */
+@media only screen and (max-width: 550px) {
+  .home__text h1 {
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+}
+
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+  .home__text h1 {
+    font-size: 4rem;
+    line-height: 5.5rem;
+  }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+  .home__text h1 {
+    font-size: 5rem;
+    line-height: 6rem;
+  }
+}
+
+/* Already handled above, but you can keep if needed */
+@media only screen and (min-width: 991px) {
+  .home__text h1 {
+    font-size: 6rem;
+    line-height: 7rem;
+  }
+}
+
+
